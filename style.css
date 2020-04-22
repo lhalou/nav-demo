@@ -3,10 +3,6 @@
   padding: 0
 }
 
-.content {
-  text-align: center;
-}
-
 kbd {
   border: 1px solid red;
   display: inline-block;
@@ -17,7 +13,7 @@ kbd {
   position: relative;
 }
 
-button {
+kbd>button {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -28,12 +24,32 @@ kbd:hover>button {
   display: inline-block;
 }
 
+body {
+  background: grey url(./wall.jpg.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+main {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 #main>div:nth-child(2) {
   margin-left: -22px;
 }
 
 #main>div:nth-child(3) {
   margin-left: -80px;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
 .key {
