@@ -34,11 +34,9 @@
       u: "uc.com",
       i: "iqiyi.com",
       o: "opera.com",
-      p: undefined,
       a: "acfun.tv",
       s: "sohu.com",
       z: "zhihu.com",
-      m: "mcdonalds.com.cn",
     };
     hashInLocalStorage = JSON.parse(localStorage.getItem('zzz') || 'null')
     if (hashInLocalStorage) {
@@ -54,8 +52,18 @@
       row = keys[index]
       while (index2 < row.length) {
         kbd = document.createElement('kbd')
-        kbd.textContent = row[index2]
+        span = document.createElement('span')
+        span.className = 'text'
+        span.textContent = row[index2]
+        kbd.appendChild(span)
         kbd.className = 'key'
+        img = document.createElement('img')
+        if (hash[row[index2]]) {
+          img.src = "http://" + hash[row[index2]] + '/favicon.ico'
+        } else {
+          img.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
+        }
+        kbd.appendChild(img)
         button = document.createElement('button')
         button.textContent = '编辑'
         button.id = row[index2]
