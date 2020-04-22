@@ -8,11 +8,12 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 
+
 <body>
+
   <header></header>
   <main>
     <div class="content" id="main">
-
     </div>
   </main>
   <footer></footer>
@@ -47,12 +48,14 @@
     index = 0
     while (index < keys['length']) {
       div = document.createElement("div");
+      div.className = 'row'
       main.appendChild(div);
       index2 = 0
       row = keys[index]
       while (index2 < row.length) {
         kbd = document.createElement('kbd')
         kbd.textContent = row[index2]
+        kbd.className = 'key'
         button = document.createElement('button')
         button.textContent = '编辑'
         button.id = row[index2]
